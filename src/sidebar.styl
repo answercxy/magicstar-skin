@@ -1,0 +1,69 @@
+catContainer = @block{
+  border: 1px solid $cat-border-color;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+catTitle = @block{
+  display: block;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  background: $cat-title-background;
+  color: yellow;
+  text-align left;
+  margin: -5px -5px 5px -5px;
+  padding-left 5px;
+}
+
+#sideBar {
+  padding-left: 10px;
+}
+#sideBarMain{
+  .newsItem{ //公告
+    {catContainer}
+    .catListTitle{ //公告标题
+      {catTitle}
+    }
+  }
+  
+  #calendar{
+    display none;
+  }  
+}
+
+#leftcontentcontainer{
+  .catListTitle{ //所有的title
+    {catTitle}
+  }
+  .catListEssay,
+  .catListLink,
+  .catListNoteBook,
+  .catListTag,
+  .catListPostCategory,
+  .catListPostArchive,
+  .catListArticleArchive,
+  .catListImageCategory,
+  .mySearch,
+  .catListComment,
+  .catListView,
+  .catListFeedback{ //最新随笔 
+    {catContainer}
+  }
+  .catListTag ul li{
+    display inline-block;
+    margin-right 5px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    background #9ab26b;
+    a{
+      text-decoration none
+      display block
+      min-height 30px
+      line-height 30px
+    }
+    &:hover a{
+      color: white;
+    }
+  }
+}

@@ -1,8 +1,17 @@
+/* 引入变量 */
 /* 公共样式，基础样式 */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+@font-face {
+  font-family: wt071;
+  font-style: normal;
+  src: url("./../fonts/wt071.ttf");
+}
+body {
+  font-size: 14px;
 }
 #home {
   min-width: auto;
@@ -63,6 +72,10 @@
   margin-left: 0;
 }
 /* 头部相关样式*/
+#header {
+  padding-bottom: 20px;
+  border: none;
+}
 #navigator {
   height: 50px;
 }
@@ -105,5 +118,70 @@
   transform-origin: 50% 0px 0px;
 }
 /* 侧边栏样式 */
+#sideBar {
+  padding-left: 10px;
+}
+#sideBarMain .newsItem {
+  border: 1px solid #169fe6;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#sideBarMain .newsItem .catListTitle {
+  display: block;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  background: #169fe6;
+  color: #ff0;
+  text-align: left;
+  margin: -5px -5px 5px -5px;
+  padding-left: 5px;
+}
+#sideBarMain #calendar {
+  display: none;
+}
+#leftcontentcontainer .catListTitle {
+  display: block;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  background: #169fe6;
+  color: #ff0;
+  text-align: left;
+  margin: -5px -5px 5px -5px;
+  padding-left: 5px;
+}
+#leftcontentcontainer .catListEssay,
+#leftcontentcontainer .catListLink,
+#leftcontentcontainer .catListNoteBook,
+#leftcontentcontainer .catListTag,
+#leftcontentcontainer .catListPostCategory,
+#leftcontentcontainer .catListPostArchive,
+#leftcontentcontainer .catListArticleArchive,
+#leftcontentcontainer .catListImageCategory,
+#leftcontentcontainer .mySearch,
+#leftcontentcontainer .catListComment,
+#leftcontentcontainer .catListView,
+#leftcontentcontainer .catListFeedback {
+  border: 1px solid #169fe6;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#leftcontentcontainer .catListTag ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  background: #9ab26b;
+}
+#leftcontentcontainer .catListTag ul li a {
+  text-decoration: none;
+  display: block;
+  min-height: 30px;
+  line-height: 30px;
+}
+#leftcontentcontainer .catListTag ul li:hover a {
+  color: #fff;
+}
 /* 主体样式*/
 /* 底部样式 */
