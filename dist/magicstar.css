@@ -1,0 +1,109 @@
+/* 公共样式，基础样式 */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#home {
+  min-width: auto;
+  width: 100%;
+}
+#main {
+  min-width: auto;
+}
+#mainContent {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  #sideBar {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #home {
+    width: 750px;
+  }
+  #sideBar {
+    width: 250px;
+  }
+  #mainContent {
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  #home {
+    width: 970px;
+  }
+  #sideBar {
+    width: 250px;
+  }
+  #mainContent {
+    width: 720px;
+  }
+}
+@media (min-width: 1200px) {
+  #home {
+    width: 1170px;
+  }
+  #sideBar {
+    width: 250px;
+  }
+  #mainContent {
+    width: 920px;
+  }
+}
+#sideBar {
+  float: left;
+}
+#mainContent {
+  float: left;
+  margin-left: 0;
+}
+#mainContent .forFlow {
+  margin-left: 0;
+}
+/* 头部相关样式*/
+#navigator {
+  height: 50px;
+}
+#navList li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+#navList li a {
+  display: inline-block;
+  color: #000;
+  height: 50px;
+  line-height: 50px;
+  padding-top: 0;
+  text-decoration: none;
+  overflow: visible;
+  transition: transform 0.3s ease 0s;
+  transform-origin: 50% 0px 0px;
+  transform-style: preserve-3d;
+}
+#navList li a:hover {
+  background: #fff;
+  color: #000;
+  transform: rotateX(90deg) translateY(-25px);
+}
+#navList li a::before {
+  content: attr(data-hover);
+/* 使用data-hover的属性值为content */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  line-height: 50px;
+  text-align: center;
+  background: none repeat scroll 0% 0% #ff005b;
+  color: #fff;
+  transition: #6363ce 0.3s ease 0s;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0px 0px;
+}
+/* 侧边栏样式 */
+/* 主体样式*/
+/* 底部样式 */

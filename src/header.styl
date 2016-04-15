@@ -1,0 +1,48 @@
+
+/* 菜单样式实现 */
+
+#navigator {
+    height: 50px;
+}
+
+#navList li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#navList li a {
+    display: inline-block;
+    color: #000;
+    height: 50px;
+    line-height: 50px;
+    padding-top: 0;
+    text-decoration: none;
+    overflow: visible;
+    transition: transform 0.3s ease 0s;
+    transform-origin: 50% 0px 0px;
+    transform-style: preserve-3d;
+}
+
+#navList li a:hover {
+    background: #fff;
+    color: #000;
+    transform: rotateX(90deg) translateY(-25px);
+}
+
+#navList li a::before {
+    content: attr(data-hover);
+    /* 使用data-hover的属性值为content */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    line-height: 50px;
+    text-align: center;
+    background: none repeat scroll 0% 0% #FF005B;
+    color: #FFF;
+    transition: #6363CE 0.3s ease 0s;
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0px 0px;
+}

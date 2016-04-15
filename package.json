@@ -1,0 +1,29 @@
+{
+  "name": "magicstar-skin",
+  "version": "0.0.1",
+  "description": "A skin for cnblogs.",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hstarorg/magicstar-skin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hstarorg/magicstar-skin/issues"
+  },
+  "homepage": "https://github.com/hstarorg/magicstar-skin#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-stylus": "^2.3.1"
+  }
+}
