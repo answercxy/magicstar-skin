@@ -1,0 +1,137 @@
+/*! 变量 */
+/* 常规的表达式做变量名，用等号连接变量值 */
+//在Stylus中，可以使用$，_等前缀，但建议使用特定字符开头，来标识变量
+font-size = 14px;
+$font-size = 20px 
+
+// 单行注释
+body{
+  background: white;
+  font-size font-size
+  font-size: $font-size
+  
+  width w = 100px
+  height h = 100px
+  //注意，此处表达式的括号不能少
+  margin-left -(w/2)
+  margin-top -(h/2)
+  //使用@符号引用同级的属性
+  margin-left -(@width/2)
+  margin-top -(@height/2)
+} 
+
+/*! 选择器 */
+/* 1、选择器嵌套 */
+body
+  background white
+  .container
+    background blue
+/* 2、引用直接父级别节点 */
+li
+  &:hover
+    color blue
+/* 3、引用指定级别上层节点,个人觉得稍显复杂，不易懂，尽量少使用 */
+body
+  color white
+  li
+    a
+      color green
+    ^[1]:hover
+        color yellow
+/* 4、根节点引用，使用/将当前样式提升到第一层级 */
+body
+  li
+    / .test
+      color white
+/* 5、使用../来回到上一层级 */
+body
+  li
+    ../ .test
+      color yellow
+/* 6、使用selector()来构造选择器 */
+{selector('.a', '.b, .c')}
+  color white
+/* 7、选择器为变量，那么用{}包裹，属性也是 */
+$selector = ".text-danger"
+$font = font-family
+
+{$selector}
+  {$font} "微软雅黑"
+
+/* 8、使用表达式 */
+exp_margin_pad(n)
+  margin (- n)px
+  
+body
+  exp_margin_pad(10)
+  
+  
+/*! 样式块，两种定义方式，推荐第二种，为了易读性 */
+font = 
+  font-family "微软雅黑"
+  font-size 1rem
+
+font1 = @block{
+  font-family "宋体"
+  font-size 14px;
+}
+  
+body
+  {font}
+  {font1}
+
+/*! 样式继承 */
+
+.btn
+  border 1px solid red;
+  border-radius 5px
+
+.btn-danger
+  @extend .btn //继承.btn的样式
+  color red
+  
+//如果不嫌输出.btn，我们只需要将btn做成占位选择器，如下
+$btn
+  border 1px solid red;
+  border-radius 5px
+  
+.btn-info
+  @extend $btn
+  color purple
+  
+  
+/*! 函数 */
+// 个人建议在定义函数时，以f_为前缀，方便识别
+f_plus(a, b) //简单函数
+  a + b
+  
+f_plus2(a, b = a) //带默认值的函数
+  a + b + 0px
+
+f_multireturn() //多返回值函数
+  5px 10px 15px 20px
+  
+f_margin() //想要作为整体返回,为了消除歧义，建议使用rerurn和括号包裹返回值
+  return (5px 10px 5px 10px)
+
+f_test = f_margin //函数可以指定别名
+
+//和js雷同，函数可以作为参数传递
+f_fun1(a, b)
+  a + b + 0px
+f_fun2(a, b)
+  a - b + 0px
+f_invork(a, b, fn)
+  fn(a, b)  
+
+body
+  margin-top f_plus(5, 10)
+  margin-top f_plus(5px, 10)
+  margin-top f_plus2(5)
+  margin-top f_plus2(b: 10, a: 5) //命名参数传递
+  margin-bottom f_multireturn()[3] //取第四个值，下标从0开始
+  margin f_margin()
+  width f_invork(100, 50, f_fun1)
+  height f_invork(100, 50, f_fun2)
+ 
+//### 2.8 CSS混入（Mixins）

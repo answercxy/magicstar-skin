@@ -58,12 +58,40 @@ catTitle = @block{
     background #9ab26b;
     a{
       text-decoration none
-      display block
       min-height 30px
       line-height 30px
     }
-    &:hover a{
+    &:hover a, &:hover{
       color: white;
     }
   }
+  
+  .catListLink li{
+    float:left;
+    width: 108px;
+    text-align: center;
+    background: #9ab26b;
+    margin-bottom: 5px; 
+    margin-right: 5px;
+    &:nth-child(2n){
+      margin-left: 5px;
+      margin-right: 0;
+    }
+  }
+  .catListLink::after{
+    clear: both;
+    content: '';
+    display block;
+  }
+
+  .input_my_zzk{
+    width: 160px;
+  }
+  #widget_my_zzk{
+    margin-bottom: 5px;
+  }
 }
+#blog-calendar{
+  display: none;
+}
+  

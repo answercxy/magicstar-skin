@@ -1,0 +1,65 @@
+.forFlow{
+  .day{
+    margin-bottom: 10px;
+    // border: 1px solid #169fe6;
+    
+    &::after{
+      clear: both;
+      content: '';
+      display: block;
+    }
+    
+    .dayTitle{
+      background: #169fe6;
+      border: 1px solid #169fe6;
+      margin: 0;
+      height: 30px;
+      color: #ff0;
+      line-height 30px;
+      text-align left;
+      display none;
+    }
+    .postTitle{
+      border: 1px solid #169fe6;
+      height 30px;
+      background #169fe6;
+      line-height 30px;
+      padding-left 5px;
+      a{
+        color: #ff0; 
+        &:hover{
+          color: white;
+        }
+      }
+    }
+    .postCon{
+      padding 5px;
+      border: 1px solid #169fe6;
+      border-bottom none;
+    }
+    .postDesc{
+      border: 1px solid #169fe6;
+      border-top: 0;
+      margin-top: 0;
+    }
+    
+    .postSeparator{
+      border: none;
+      margin-bottom: 15px;
+    }
+    // 阅读全文 按钮
+    .c_b_p_desc_readmore{
+      background #72c02c;
+      color: #fff;
+      display block;
+      width: 80px;
+      text-align: center;
+      text-decoration none;
+    }
+  }
+}
+
+//隐藏广告
+#ad_t2, #ad_c1, #ad_c2, #under_post_news, #under_post_kb{
+  display none !important;
+}

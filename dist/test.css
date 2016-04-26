@@ -1,0 +1,90 @@
+/* 变量 */
+/* 常规的表达式做变量名，用等号连接变量值 */
+body {
+  background: #fff;
+  font-size: 14px;
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+/* 选择器 */
+/* 1、选择器嵌套 */
+body {
+  background: #fff;
+}
+body .container {
+  background: #00f;
+}
+/* 2、引用直接父级别节点 */
+li:hover {
+  color: #00f;
+}
+/* 3、引用指定级别上层节点,个人觉得稍显复杂，不易懂，尽量少使用 */
+body {
+  color: #fff;
+}
+body li a {
+  color: #008000;
+}
+body li:hover {
+  color: #ff0;
+}
+/* 4、根节点引用，使用/将当前样式提升到第一层级 */
+.test {
+  color: #fff;
+}
+/* 5、使用../来回到上一层级 */
+body .test {
+  color: #ff0;
+}
+/* 6、使用selector()来构造选择器 */
+.a .b,
+.a .c {
+  color: #fff;
+}
+/* 7、选择器为变量，那么用{}包裹，属性也是 */
+.text-danger {
+  font-family: "微软雅黑";
+}
+/* 8、使用表达式 */
+body {
+  margin: -10px;
+}
+/* 样式块，两种定义方式，推荐第二种，为了易读性 */
+body {
+  font-family: "微软雅黑";
+  font-size: 1rem;
+  font-family: "宋体";
+  font-size: 14px;
+}
+/* 样式继承 */
+.btn,
+.btn-danger {
+  border: 1px solid #f00;
+  border-radius: 5px;
+}
+.btn-danger {
+  color: #f00;
+}
+.btn-info {
+  border: 1px solid #f00;
+  border-radius: 5px;
+}
+.btn-info {
+  color: #800080;
+}
+/* 函数 */
+body {
+  margin-top: 15;
+  margin-top: 15px;
+  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin: 5px 10px 5px 10px;
+  width: 150px;
+  height: 50px;
+}

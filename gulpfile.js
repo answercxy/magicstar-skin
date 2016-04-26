@@ -7,7 +7,9 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('css', _ =>
   gulp.src('./src/magicstar.styl')
-    .pipe(stylus())
+    .pipe(stylus({
+      compress: false
+    }))
     .pipe(gulp.dest('./dist/'))
 );
 

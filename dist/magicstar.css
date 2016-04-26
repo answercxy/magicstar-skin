@@ -73,11 +73,15 @@ body {
 }
 /* 头部相关样式*/
 #header {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border: none;
 }
 #navigator {
   height: 50px;
+}
+#navigator .blogStats {
+  line-height: 50px;
+  margin-top: 0;
 }
 #navList li {
   display: inline-block;
@@ -95,7 +99,7 @@ body {
   transform-origin: 50% 0px 0px;
   transform-style: preserve-3d;
 }
-#navList li a:hover {
+#navList li:hover a {
   background: #fff;
   color: #000;
   transform: rotateX(90deg) translateY(-25px);
@@ -111,7 +115,7 @@ body {
   padding: 0;
   line-height: 50px;
   text-align: center;
-  background: none repeat scroll 0% 0% #ff005b;
+  background: none repeat scroll 0% 0% #169fe6;
   color: #fff;
   transition: #6363ce 0.3s ease 0s;
   transform: rotateX(-90deg);
@@ -176,12 +180,98 @@ body {
 }
 #leftcontentcontainer .catListTag ul li a {
   text-decoration: none;
-  display: block;
   min-height: 30px;
   line-height: 30px;
 }
-#leftcontentcontainer .catListTag ul li:hover a {
+#leftcontentcontainer .catListTag ul li:hover a,
+#leftcontentcontainer .catListTag ul li:hover {
   color: #fff;
 }
+#leftcontentcontainer .catListLink li {
+  float: left;
+  width: 108px;
+  text-align: center;
+  background: #9ab26b;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+#leftcontentcontainer .catListLink li:nth-child(2n) {
+  margin-left: 5px;
+  margin-right: 0;
+}
+#leftcontentcontainer .catListLink::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+#leftcontentcontainer .input_my_zzk {
+  width: 160px;
+}
+#leftcontentcontainer #widget_my_zzk {
+  margin-bottom: 5px;
+}
+#blog-calendar {
+  display: none;
+}
 /* 主体样式*/
+.forFlow .day {
+  margin-bottom: 10px;
+}
+.forFlow .day::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+.forFlow .day .dayTitle {
+  background: #169fe6;
+  border: 1px solid #169fe6;
+  margin: 0;
+  height: 30px;
+  color: #ff0;
+  line-height: 30px;
+  text-align: left;
+  display: none;
+}
+.forFlow .day .postTitle {
+  border: 1px solid #169fe6;
+  height: 30px;
+  background: #169fe6;
+  line-height: 30px;
+  padding-left: 5px;
+}
+.forFlow .day .postTitle a {
+  color: #ff0;
+}
+.forFlow .day .postTitle a:hover {
+  color: #fff;
+}
+.forFlow .day .postCon {
+  padding: 5px;
+  border: 1px solid #169fe6;
+  border-bottom: none;
+}
+.forFlow .day .postDesc {
+  border: 1px solid #169fe6;
+  border-top: 0;
+  margin-top: 0;
+}
+.forFlow .day .postSeparator {
+  border: none;
+  margin-bottom: 15px;
+}
+.forFlow .day .c_b_p_desc_readmore {
+  background: #72c02c;
+  color: #fff;
+  display: block;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+}
+#ad_t2,
+#ad_c1,
+#ad_c2,
+#under_post_news,
+#under_post_kb {
+  display: none !important;
+}
 /* 底部样式 */
